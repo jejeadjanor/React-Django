@@ -51,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware'
 ]
 
 ROOT_URLCONF = 'signupapi.urls'
@@ -72,6 +73,10 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'signupapi.wsgi.application'
+
+CORS_ORIGIN_WHITELIST = [ 
+    "http://localhost:3000"
+]
 
 
 # Database
